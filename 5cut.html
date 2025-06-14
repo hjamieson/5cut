@@ -19,24 +19,27 @@
     </header>
     <main>
       <section id="main">
-        main content and form input here
+        <p>Use the dimensions of the cut-off in the fields provided.</p>
         <form action="">
-          <label for="dima">Top(A):</label>
           <input type="text" name="dima" id="dima" placeholder="top in inches"/>
-          <label for="dimb">Bottom(B):</label>
+          <label for="dima">Top(A):</label>
           <input type="text" name="dimb" id="dimb" placeholder="bottom in inches"/>
-          <label for="dimc">Length:</label>
+          <label for="dimb">Bottom(B):</label>
           <input type="text" name="dimc" id="dimc" placeholder="length of cut"/>
-          <label for="pivot">Distance to Pivot:</label>
+          <label for="dimc">Length:</label>
           <input type="text" name="pivot" id="pivot" placeholder="distance to pivot"/>
+          <label for="pivot">Distance to Pivot:</label>
         </form>
       </section>
       <hr />
 
       <section id="calculations">
-        <div>EPI: <span id="epi" class="result"></span></div>
-        <div>Distance to move: <span id="distance" class="result"></span></div>
-        <div>Action: <span id="direction"></span></div>
+        <div>EPI: </div>
+        <div id="epi"></div>
+        <div>Correction:</div>
+        <div id="distance"></div>
+        <div>Action:</div>
+        <div id="direction"></div>
       </section>
 
     </main>

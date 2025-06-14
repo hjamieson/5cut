@@ -24,37 +24,37 @@ const calculate = () => {
 };
 
 const onNewData = (event) => {
-  const data = event.target.value;
-  console.log("handling change for " + data);
-  if (!(data === "") && !isNaN(data)) {
+  dataReady();
+};
+
+const dataReady = () => {
+  const a = dima.value.trim();
+  const b = dimb.value.trim();
+  const c = dimc.value.trim();
+  const p = pivot.value.trim();
+  if (
+    a.length > 0 &&
+    !isNaN(a) &&
+    b.length > 0 &&
+    !isNaN(b) &&
+    c.length > 0 &&
+    !isNaN(c) &&
+    p.length > 0 &&
+    !isNaN(p)
+  ) {
     calculate();
   }
+};
 
-}
-
-inputs.forEach(elem => {
+inputs.forEach((elem) => {
   elem.addEventListener("change", (event) => {
     onNewData(event);
   });
-  console.log('added handler');
-})
+  console.log("added handler");
+});
 
-// dima.addEventListener("change", (event) => {
-//   onNewData(event);
-// });
-
-// dimb.addEventListener("change", () => {
-//   if (!isNaN(dimb.value)) {
-//     calculate();
-//   }
-// });
-// dimc.addEventListener("change", () => {
-//   if (!isNaN(dimc.value)) {
-//     calculate();
-//   }
-// });
-// pivot.addEventListener("change", () => {
-//   if (!isNaN(pivot.value)) {
-//     calculate();
-//   }
-// });
+const clear = () => {
+  epi.textContent = "";
+  distance.textContent = "";
+  direction.textContent = "";
+};
