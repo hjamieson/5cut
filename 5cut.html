@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5-Cut Method</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="5cut.css" />
+  </head>
+  <body>
+    <header>
+      <h1>5-Cut Method</h1>
+      <nav></nav>
+    </header>
+    <main>
+      <section id="main">
+        main content and form input here
+        <form action="">
+          <label for="dima">Top(A):</label>
+          <input type="text" name="dima" id="dima" placeholder="top in inches"/>
+          <label for="dimb">Bottom(B):</label>
+          <input type="text" name="dimb" id="dimb" placeholder="bottom in inches"/>
+          <label for="dimc">Length:</label>
+          <input type="text" name="dimc" id="dimc" placeholder="length of cut"/>
+          <label for="pivot">Distance to Pivot:</label>
+          <input type="text" name="pivot" id="pivot" placeholder="distance to pivot"/>
+        </form>
+      </section>
+      <hr />
+
+      <section id="calculations">
+        <div>EPI: <span id="epi" class="result"></span></div>
+        <div>Distance to move: <span id="distance" class="result"></span></div>
+        <div>Action: <span id="direction"></span></div>
+      </section>
+
+    </main>
+
+    <hr/>
+
+    <footer>&copy;2025 by Huey</footer>
+  </body>
+  <script src="5cut.js"></script>
+</html>
